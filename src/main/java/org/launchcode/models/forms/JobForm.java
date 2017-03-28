@@ -27,6 +27,15 @@ public class JobForm {
         with correct validation attributes and display names.
         Don't forget to add getters and setters
      */
+    @NotNull
+    @Size(min=1, message = "Location may not be empty")
+    private String location;
+    @NotNull
+    @Size(min=1, message = "Position Type may not be empty")
+    private String positionType;
+    @NotNull
+    @Size(min=1, message = "Skill may not be empty")
+    private String coreCompetency;
 
     private ArrayList<Employer> employers;
     private ArrayList<Location> locations;
@@ -42,6 +51,9 @@ public class JobForm {
         */
 
         employers = jobData.getEmployers().findAll();
+        locations = jobData.getLocations().findAll();
+        coreCompetencies = jobData.getCoreCompetencies().findAll();
+        positionTypes = jobData.getPositionTypes().findAll();
 
     }
 
