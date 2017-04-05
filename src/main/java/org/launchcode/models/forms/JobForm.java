@@ -28,14 +28,12 @@ public class JobForm {
         Don't forget to add getters and setters
      */
     @NotNull
-    @Size(min=1, message = "Location may not be empty")
-    private String location;
+    private Location location;
     @NotNull
-    @Size(min=1, message = "Position Type may not be empty")
-    private String positionType;
+    private PositionType positionType;
     @NotNull
-    @Size(min=1, message = "Skill may not be empty")
-    private String coreCompetency;
+    private CoreCompetency coreCompetency;
+
 
     private ArrayList<Employer> employers;
     private ArrayList<Location> locations;
@@ -73,27 +71,27 @@ public class JobForm {
         this.employerId = employerId;
     }
 
-    public String getLocation() {
+    public Location getLocation() {
         return location;
     }
 
-    public void setLocation(String location) {
+    public void setLocation(Location location) {
         this.location = location;
     }
 
-    public String getPositionType() {
+    public PositionType getPositionType() {
         return positionType;
     }
 
-    public void setPositionType(String positionType) {
+    public void setPositionType(PositionType positionType) {
         this.positionType = positionType;
     }
 
-    public String getCoreCompetency() {
+    public CoreCompetency getCoreCompetency() {
         return coreCompetency;
     }
 
-    public void setCoreCompetency(String coreCompetency) {
+    public void setCoreCompetency(CoreCompetency coreCompetency) {
         this.coreCompetency = coreCompetency;
     }
 
